@@ -1,0 +1,289 @@
+
+body{
+    font-family: "Montserrat", sans-serif;
+    color: #6a6969;
+    background: #ffffff;
+    display: block;
+    font-size: 15px;
+    line-height: 1.5;
+    width: 100%;
+    height: 100%;
+    margin-right: 1px;
+}
+/* grid container */
+.grid-container{
+    display: grid;
+    grid-template-areas: "header"
+                         "main"
+                         "main";
+    /* grid-template-columns: 50% 50%; */
+    gap: 10px;
+    height: 100vh;
+    overflow: hidden;
+}
+.header{
+    grid-area: header;
+}
+/* main content */
+.main{
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+    overflow-y: scroll;
+    padding: 10px;
+}
+/* end of grid container */
+
+/* Navigation bar */
+nav{
+    width: 100%;
+    padding: 12px 0px;
+    box-shadow: -3px -3px 7px #ffffff, 3px 3px 5px #ceced1;
+}
+.menu{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a{
+    font-size: 28px;
+    font-family: 600;
+    text-decoration: none;
+    color: #757575;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+
+}
+
+.menu ul a{
+    text-decoration: none;
+    margin: 0 8px;
+    font-size: 18px;
+    font-weight: 400;
+    color: #757575;
+    display: inline-flex;
+    padding: 10px 12px;
+    box-shadow:  -3px -3px 7px #ffffff,
+                  3px 3px 5px #ceced1;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.menu ul a:hover:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: inset -3px -3px 7px #ffffff,
+                inset  3px 3px 5px #ceced1;
+
+}
+
+.menu ul a:hover{
+    color: #3498db;
+}
+/* Navigation bar end */
+
+/* Home section */
+#home{
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-pic{
+    margin-bottom: 12px;
+}
+
+
+.btn-resume{
+    border: none;
+    padding: 13px 18px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-resume:hover{
+    background-color: #ccc5c5;
+    box-shadow: 1px 1px 3px black;
+}
+.opacity{
+    opacity: 0.30;
+}
+
+/* projects-portfolio */
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    /* gap: 0; */
+    margin-top: 30px;
+}
+.project-half{
+    padding: 0 8px;
+}
+.project-pic{
+    margin-bottom: 12px;
+    border-style: none;
+    box-shadow: 3px 3px 8px black;
+    vertical-align: middle;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+
+/* skills section */
+.skill-text{
+    letter-spacing: 4px;
+}
+.progress{
+    background: #dcd7d7;
+    width: 100%;
+    height: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
+    text-align: center;
+    color: white;
+}
+.progress-bar-1{
+    background: #3e3c3c;
+    width: 95%;
+    height: inherit;
+}
+.progress-bar-2{
+    background: #3e3c3c;
+    width: 85%;
+    height: inherit;
+}
+.progress-bar-3{
+    background: #3e3c3c;
+    width: 80%;
+    height: inherit;
+}
+.load{
+    animation: loading 7s linear;
+    animation-delay: 1s;
+}
+@keyframes loading{
+    0%{width: 0%}
+}
+
+/* partner-skill footer section */
+.partner{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    background: #3b3838;
+    color: white;
+    width: 100%;
+}
+
+/* avatar-reputation section */
+.avatar{
+    display: flex;
+
+}
+.avatar-name{
+    font-weight: bold;
+    font-size: 20px;
+}
+.avatar-img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* My Price */
+.price{
+    display: flex;
+    text-align: center;
+}
+#basic, #pro{
+    border: 2px solid #a29b9b;
+    margin-right: 10px;
+    box-shadow: 2px 2px 10px #a29b9b;
+    
+}
+.basic-header{
+    color: white;
+    background: #808080;
+    padding: 32px 100px;
+    border-bottom: 10px solid #808080;
+}
+.pro-header{
+    color: white;
+    background: #060606;
+    padding: 32px 100px;
+    border-bottom: 10px solid #060606;
+}
+.price-item{
+    padding: 16px 100px;
+    border-bottom: 1px solid #d9d3d3;
+}
+.btn-signup{
+    background: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.btn-signup:hover{
+    background: #b1aaaa;
+}
+
+/* contact section */
+.contact-item{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.contact-map{
+    width: 800px;
+    height: 400px;
+}
+/* form  */
+.input-box{
+    margin-top: 13px;
+}
+input{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    height: 40px;
+    width: 500px;
+    border-radius: 0%;
+    border: 1px solid #d9d3d3;
+}
+#submit{
+    margin-top: 13px;
+}
+
+/* footer section */
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #f7f7f7;
+    color: #6d6b6b;
+    padding: 80px 30px;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+.footer-icon{
+    display: flex;
+}
