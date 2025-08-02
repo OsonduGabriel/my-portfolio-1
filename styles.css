@@ -20,6 +20,7 @@ body{
     gap: 10px;
     height: 100vh;
     overflow: hidden;
+    overflow-x: scroll;
 }
 .header{
     grid-area: header;
